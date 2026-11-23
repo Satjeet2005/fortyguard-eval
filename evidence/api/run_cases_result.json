@@ -1,0 +1,105 @@
+{
+  "credits_before": 989380,
+  "credits_after": 989380,
+  "rows": [
+    {
+      "id": "auth_bad_key",
+      "finding": "A5",
+      "expect": 401,
+      "actual": 401,
+      "result": "ok",
+      "content_type": "application/json",
+      "seconds": 1.63
+    },
+    {
+      "id": "auth_no_key",
+      "finding": "A5",
+      "expect": 401,
+      "actual": 401,
+      "result": "ok",
+      "content_type": "application/json",
+      "seconds": 1.02
+    },
+    {
+      "id": "empty_body",
+      "finding": "A5",
+      "expect": 422,
+      "actual": 422,
+      "result": "ok",
+      "content_type": "application/json",
+      "seconds": 1.64
+    },
+    {
+      "id": "no_polygon",
+      "finding": "A5",
+      "expect": 422,
+      "actual": 422,
+      "result": "ok",
+      "content_type": "application/json",
+      "seconds": 1.84
+    },
+    {
+      "id": "bad_granularity",
+      "finding": "A3",
+      "expect": 422,
+      "actual": 422,
+      "result": "ok",
+      "content_type": "application/json",
+      "seconds": 2.05
+    },
+    {
+      "id": "type1_no_start_time",
+      "finding": "A1",
+      "expect": 422,
+      "actual": 500,
+      "result": "BUG",
+      "content_type": "application/json",
+      "seconds": 3.08
+    },
+    {
+      "id": "type2_no_end_time",
+      "finding": "A1",
+      "expect": 422,
+      "actual": 500,
+      "result": "BUG",
+      "content_type": "application/json",
+      "seconds": 1.83
+    },
+    {
+      "id": "end_before_start",
+      "finding": "A1",
+      "expect": 422,
+      "actual": 500,
+      "result": "BUG",
+      "content_type": "application/json",
+      "seconds": 3.28
+    },
+    {
+      "id": "bad_date_format",
+      "finding": "A1",
+      "expect": 422,
+      "actual": 500,
+      "result": "BUG",
+      "content_type": "application/json",
+      "seconds": 1.64
+    },
+    {
+      "id": "bad_time_format",
+      "finding": "A1",
+      "expect": 422,
+      "actual": 500,
+      "result": "BUG",
+      "content_type": "application/json",
+      "seconds": 2.87
+    },
+    {
+      "id": "status_random_id",
+      "finding": "A5",
+      "expect": 404,
+      "actual": 404,
+      "result": "ok",
+      "content_type": "application/json",
+      "seconds": 2.05
+    }
+  ]
+}
