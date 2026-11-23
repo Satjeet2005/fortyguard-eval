@@ -1,0 +1,17 @@
+{
+  "base": "https://api.fortyguard.com",
+  "polygon": {"type":"Polygon","coordinates":[[[-86.20,39.76],[-86.19,39.76],[-86.19,39.77],[-86.20,39.77],[-86.20,39.76]]]},
+  "cases": [
+    {"id":"auth_bad_key",   "finding":"A5", "method":"POST","path":"/v1/heatmap","key":"bad","body":{},"expect":401},
+    {"id":"auth_no_key",    "finding":"A5", "method":"POST","path":"/v1/heatmap","key":"none","body":{},"expect":401},
+    {"id":"empty_body",     "finding":"A5", "method":"POST","path":"/v1/heatmap","body":{},"expect":422},
+    {"id":"no_polygon",     "finding":"A5", "method":"POST","path":"/v1/heatmap","body":{"date_time":{"start_date":"2024-07-15","start_time":"14:00","filter_type":1},"granularity":100},"expect":422},
+    {"id":"bad_granularity","finding":"A3", "method":"POST","path":"/v1/heatmap","body":{"polygon_aoi":"$POLY","date_time":{"start_date":"2024-07-15","start_time":"14:00","filter_type":1},"granularity":7},"expect":422},
+    {"id":"type1_no_start_time","finding":"A1","method":"POST","path":"/v1/heatmap","body":{"polygon_aoi":"$POLY","date_time":{"start_date":"2024-07-15","filter_type":1},"granularity":100},"expect":422},
+    {"id":"type2_no_end_time",  "finding":"A1","method":"POST","path":"/v1/heatmap","body":{"polygon_aoi":"$POLY","date_time":{"start_date":"2024-07-15","start_time":"14:00","end_date":"2024-07-16","filter_type":2},"granularity":100},"expect":422},
+    {"id":"end_before_start",   "finding":"A1","method":"POST","path":"/v1/heatmap","body":{"polygon_aoi":"$POLY","date_time":{"start_date":"2024-07-16","start_time":"14:00","end_date":"2024-07-15","end_time":"15:00","filter_type":2},"granularity":100},"expect":422},
+    {"id":"bad_date_format",    "finding":"A1","method":"POST","path":"/v1/heatmap","body":{"polygon_aoi":"$POLY","date_time":{"start_date":"15/07/2024","start_time":"14:00","filter_type":1},"granularity":100},"expect":422},
+    {"id":"bad_time_format",    "finding":"A1","method":"POST","path":"/v1/heatmap","body":{"polygon_aoi":"$POLY","date_time":{"start_date":"2024-07-15","start_time":"2pm","filter_type":1},"granularity":100},"expect":422},
+    {"id":"status_random_id",   "finding":"A5","method":"GET","path":"/v1/status/00000000-0000-0000-0000-000000000000","body":null,"expect":404}
+  ]
+}
