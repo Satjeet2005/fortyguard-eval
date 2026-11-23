@@ -19,3 +19,6 @@ Captured Nov 2026 on dashboard.fortyguard.com with an intern-session trial accou
 | 12_profile_us_states_only.png | Profile step: "U.S. states only" badge and a required "Access US State" field (contradicts the welcome card) |
 | 13_size_limit_warning_during_drag.png | Dragging a shape from outside the subscribed state to inside: "Maximum Polygon Size Limit (388.50 Km²)" warnings stack up while the panel reads 275.29 km² |
 | 14_size_limit_warning_drag.mp4 | 8 s recording of the same drag |
+| 15_devtools_toast_container.png | DevTools: the whole toast stack is one 320 x 960 px `p-toast` element over the map |
+| 16_upload_no_network_request.png | .jpeg selected, Confirm clicked, Network tab shows no upload request |
+| 17_tour_steps_3_to_8.png | Interactive tour steps 3 to 8 side by side |
