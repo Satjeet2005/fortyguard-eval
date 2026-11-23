@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+# raw, unredacted output from new runs: run `python redact.py <file>` first, then `git add -f`
+/log*.jsonl
+/result_*.json
+/baseline_result.json
+auth.json
+.codex/
+.claude.json
