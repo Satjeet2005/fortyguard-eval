@@ -15,3 +15,7 @@ Captured Nov 2026 on dashboard.fortyguard.com with an intern-session trial accou
 | 08_chatbot_cannot_change_from_dashboard.png | Assistant says the state cannot be changed from the dashboard; nothing in the UI says this |
 | 09_time_picker_no_timezone.png | Time picker offers hours only, with no timezone selector |
 | 10_mobile_map_comparison_no_scroll.mp4 | Map Comparison page at phone width (9 s); a 1-finger drag on the map shows "Use two fingers to move the map" and the page does not scroll |
+| 11_welcome_card_worldwide.png | Welcome card: "Explore temperature conditions for any location worldwide" |
+| 12_profile_us_states_only.png | Profile step: "U.S. states only" badge and a required "Access US State" field (contradicts the welcome card) |
+| 13_size_limit_warning_during_drag.png | Dragging a shape from outside the subscribed state to inside: "Maximum Polygon Size Limit (388.50 Km²)" warnings stack up while the panel reads 275.29 km² |
+| 14_size_limit_warning_drag.mp4 | 8 s recording of the same drag |
